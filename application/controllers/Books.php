@@ -25,7 +25,7 @@ class Books extends CI_Controller {
 	}
 	public function delete($id) {
 		$book_id = $this->Book->db_delete_review($id);
-		redirect('/Books/title/'.$book_id['id']);
+		redirect('/Books/title/'. $book_id['book_id']);
 	}
 	public function user($id){
 		$result = $this->Book->db_user_reviews($id);
