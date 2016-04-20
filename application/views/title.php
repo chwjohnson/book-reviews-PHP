@@ -36,7 +36,7 @@
 				<h3>Add a new review for this title</h3>
 				<hr>
 				<form action="/Books/add_review" method="post">
-					<input type="hidden" name="title" value='<?= $reviews[0]['name'] ?>'>
+					<input type="hidden" name="title" value="<?= $reviews[0]['name'] ?>">
 					Review: <textarea name="content"></textarea>
 					Rating: 
 					<input type="number" name="rating" min="1" max="5" value="1">
