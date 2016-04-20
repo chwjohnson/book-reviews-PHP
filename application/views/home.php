@@ -23,7 +23,7 @@
 					foreach ($result[1] as $value) {
 						echo "<p><a href='/Books/title/" . $value['id'] . "'>" . $value['name'] . "</a></p>";
 						echo "<h4>rating: " . $value['rating'] . "</h4>";
-						echo "<p><a href='/Books/user/" . $value['user_id'] . "'></a> says: " . $value['content'] . "</p>";
+						echo "<p><a href='/Books/user/" . $value['user_id'] . "'>".$value['alias']."</a> says: " . $value['content'] . "</p>";
 						echo "<p>" . $value['created_at'] . "</p>\n<hr>";
 					}
 				?>
