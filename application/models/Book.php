@@ -49,7 +49,7 @@ class Book extends CI_Model {
 	}
 	public function home(){
 		$query1 = "SELECT books.name, books.id FROM books";
-		$query2 = "SELECT books.id, books.name, users.id AS user_id, users.alias, reviews.rating, reviews.content, reviews.created_at, FROM users JOIN reviews ON users.id = reviews.user_id JOIN books ON reviews.book_id = books.id ORDER BY reviews.created_at DESC LIMIT 3";
+		$query2 = "SELECT books.id, books.name, users.id AS 'user_id', users.alias, reviews.rating, reviews.content, reviews.created_at, FROM users JOIN reviews ON users.id = reviews.user_id JOIN books ON reviews.book_id = books.id ORDER BY reviews.created_at DESC LIMIT 3";
 		$result1 = $this->db->query($query1)->result_array();
 		$result2 = $this->db->query($query2)->result_array();
 		return array($result1, $result2);
